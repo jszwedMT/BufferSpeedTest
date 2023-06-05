@@ -3,12 +3,19 @@
 This intent of this repo is to test the variances between cpu and gpu operations on a mesh in unity using the old API methods, and the new GetVertexBuffer
 
 The following results were tested on 6 models of increasing size by turning a Quaternion into a TRS, then multiplying among every single vertex in the model to rotate it. Each of the tests were run over 10000 iterations. the following are the sizes of the models used:
+
 8 verts
+
 98 verts
+
 389 verts
+
 1.5k verts
+
 12.2k verts 
+
 49k verts
+
 with varying methods of computation:
 
 The average frame-overhead was: 19.32
