@@ -40,7 +40,7 @@ overcopy-gpu - copy the vertex array from the mesh, set it in a gpu buffer, comp
 
 cache-gpu - copy data from the mesh once to a gpu buffer, modify the buffer, and set the mesh after modification.
 
-direct-vbuffer - get a copy of the direct gpu buffer from the mesh, and modify the gpu buffer.
+direct-vbuffer - get a copy of the direct gpu buffer from the mesh, and modify the gpu buffer using the new 2021.4 mesh API.
 
 The following is a visualized graph of the results.
 
