@@ -1,0 +1,25 @@
+#pragma kernel CSMain
+
+struct vertexGroup
+{
+    float3 vert;
+    float3 normal;
+    float4 tangent;
+    float2 uv;
+};
+
+RWStructuredBuffer<vertexGroup> Input;
+int Count;
+float4x4 TRS;
+
+[numthreads(1024, 1, 1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= Count)
+        return;
+
+    vertexGroup vg = Input[id.x];
+    vg.vert = mul(TRS, vg.vert);
+
+    Input[id.x] = vg;
+}
